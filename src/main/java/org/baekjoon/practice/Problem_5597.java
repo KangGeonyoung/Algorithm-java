@@ -1,8 +1,8 @@
-package org.example;
+package org.baekjoon.practice;
 
 import java.util.Scanner;
 
-public class Main {
+public class Problem_5597 {
     public static void main(String[] args) {
         Scanner kb = new Scanner(System.in);
         int[] numbers = new int[30];
