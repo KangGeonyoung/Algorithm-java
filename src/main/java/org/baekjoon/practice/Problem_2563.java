@@ -1,8 +1,8 @@
-package org.example;
+package org.baekjoon.practice;
 
 import java.util.Scanner;
 
-public class Main {
+public class Problem_2563 {
     public static void main(String[] args) {
         Scanner kb = new Scanner(System.in);
         int[][] matrix = new int[100][100];
