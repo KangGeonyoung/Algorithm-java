@@ -47,7 +47,7 @@ public class Problem_16234 {
         int result = 0;  // 인구 이동 횟수
         visited = new boolean[N][N];
 
-        while(true) {
+        while (true) {
             if (movePeople() == 0) {
                 break;
             } else {
@@ -55,18 +55,21 @@ public class Problem_16234 {
             }
         }
 
+        bw.write(Integer.toString(result));
+        bw.close();
     }
 
     // unionCount가 2번째 for문 안으로 들어가야 하는거 아닌가..?
     // 그리고 최상단에는 unionCount가 아닌 인구이동 count 변수를 선언해서 인구가 이동했을 때마다 +1해주고
     // 마지막에 return 해주는 방식으로 해보자
     public static int movePeople() {
-        int unionCount = 0;
+        int moveCount = 0;  // 인구 이동 횟수
 
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 if (!visited[i][j]) {
                     visited[i][j] = true;
+                    int unionCount = 0;  // 연합국 개수
                     Location location = new Location(i, j);
 
                     Queue<Location> queue = new LinkedList<>();
@@ -104,19 +107,31 @@ public class Problem_16234 {
                             Location updateLocation = unionList.get(k);
                             map[updateLocation.x][updateLocation.y] = changedPopulation;
                         }
+                        moveCount += 1;
                     }
 
                 }
             }
         }
 
+        // 다시 인구 조정하기 위해 visited 배열을 false로 초기화
         for (int i = 0; i < N; i++) {
             Arrays.fill(visited[i], false);
         }
 
-        return unionCount;
+        return moveCount;
     }
 
+    public static boolean isOpen(int current_x, int current_y, int next_x, int next_y) {
+        int currentPopulation = map[current_x][current_y];
+        int nextPopulation = map[next_x][next_y];
+        int interval = Math.abs(currentPopulation - nextPopulation);
+
+        if (interval >= L && interval <= R) {
+            return true;
+        }
+        return false;
+    }
 
     // 나라별 인구수 출력
     public static void printCountry() {
