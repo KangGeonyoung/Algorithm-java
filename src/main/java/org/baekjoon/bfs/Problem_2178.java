@@ -1,4 +1,4 @@
-package org.baekjoon.breadth_first_search;
+package org.baekjoon.bfs;
 
 import java.io.*;
 import java.util.LinkedList;
@@ -7,8 +7,10 @@ import java.util.StringTokenizer;
 
 /**
  * BFS 알고리즘 - 백준: 2178번
- * 매우 도움이 되었던 블로그
- * https://innovation123.tistory.com/72
+ * - 매우 도움이 되었던 블로그
+ * - https://innovation123.tistory.com/72
+ * - '1' - '0' 연산을 해주면 int형 1을 얻을 수 있다.
+ * - 최단 경로를 구할 시, 모든 칸에 거리를 계산하여 대입한 후 가고 싶은 곳의 좌표를 불러오면 된다.
  */
 public class Problem_2178 {
 
