@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.StringTokenizer;
 
 /**
- * 재귀 알고리즘 - 백준: 2630번
+ * 재귀 알고리즘 - 백준: 2630번 (실버 2)
  * - 같은 패턴을 찾기
  * - 종료 조건 찾기
  */

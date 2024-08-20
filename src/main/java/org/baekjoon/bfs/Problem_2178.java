@@ -6,7 +6,7 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 /**
- * BFS 알고리즘 - 백준: 2178번
+ * BFS 알고리즘 - 백준: 2178번 (실버 1)
  * - 매우 도움이 되었던 블로그
  * - https://innovation123.tistory.com/72
  * - '1' - '0' 연산을 해주면 int형 1을 얻을 수 있다.

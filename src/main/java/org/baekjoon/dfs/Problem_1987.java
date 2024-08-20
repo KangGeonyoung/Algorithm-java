@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.StringTokenizer;
 
 /**
- * DFS 알고리즘 - 백준: 1987번
+ * DFS 알고리즘 - 백준: 1987번 (골드 4)
  * - depth를 매개변수로 전달하면서 경로의 길이를 측정할 것.
  * - List를 메서드 많이 생성하는 것은 속도 저하를 일으킴.
  * - 알파벳일 경우, 방문한 알파벳을 List에 추가하는 방식이 아닌, 배열 26칸을 만들어서 boolean으로 방문 여부를 확인하자.
