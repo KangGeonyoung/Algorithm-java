@@ -1,11 +1,11 @@
-package org.baekjoon.dfs;
+package org.baekjoon.dp;
 
 import java.io.*;
 import java.util.StringTokenizer;
 
 /**
- * DFS 알고리즘 - 백준: 9095번 (실버 3)
- * - DFS 문제를 풀 때는 항상 점화식을 유추해 보자.
+ * DP 알고리즘 - 백준: 9095번 (실버 3)
+ * - DP 문제를 풀 때는 항상 점화식을 유추해 보자.
  * - 너무 복잡하게 생각하지 말고 연관성을 찾아보자.
  */
 public class Problem_9095 {
