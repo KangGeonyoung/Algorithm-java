@@ -5,6 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
+/**
+ * DFS 알고리즘 - 백준: 2606번 (실버 3)
+ * - 주어진 input으로 트리를 만드는 게 오랜만이라 시간이 걸렸다.
+ * - Branch라는 inner class를 만들고, 재귀를 이용해서 left, right 방향으로 가지 치기 하면 된다.
+ * - 트리만 잘 생성하면 조회도 재귀를 이용하면 된다.
+ */
 public class Problem_2606 {
     static int computerCnt;
     static int connectionCnt;
