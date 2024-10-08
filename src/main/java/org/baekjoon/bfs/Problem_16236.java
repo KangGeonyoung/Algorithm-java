@@ -1,10 +1,7 @@
 package org.baekjoon.bfs;
 
 import java.io.*;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.StringTokenizer;
+import java.util.*;
 
 /**
  * BFS 알고리즘 - 백준: 16236번 (골드 3)
