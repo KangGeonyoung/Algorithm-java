@@ -8,6 +8,10 @@ import java.util.List;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
+/**
+ * 다익스트라 알고리즘 - 백준: 1753번 (골드 4)
+ * - List<Node>[]과 같은 타입을 초기화 해줄 때는 Arrays.fill과 같은 함수 사용하지 말고, for문으로 초기화 해주기.
+ */
 public class Problem_1753_2 {
 
     static int V, E, K;

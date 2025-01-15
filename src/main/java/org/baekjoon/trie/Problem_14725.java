@@ -8,6 +8,7 @@ import java.util.*;
  * - trie 알고리즘은 HashMap<String, Node> child 와 같은 구조로 트리를 만들어야 한다.
  * - 트리를 만든 후, 조건에 맞게 출력해 주면 된다.
  * - 유형 : 특정 접두사를 가진 단어 찾기, 공통 접두사 찾기, 사전순 정렬 등
+ * - https://tussle.tistory.com/886 참고
  */
 public class Problem_14725 {
 
