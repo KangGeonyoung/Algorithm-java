@@ -9,7 +9,7 @@ import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
 /**
- * 다익스트라 알고리즘 - 백준: 18352 (실버 2)
+ * 다익스트라 알고리즘 - 백준: 18352번 (실버 2)
  * - 일반적인 다익스트라 알고리즘이다.
  * - 정렬이 필요할 때는 PriorityQueue를 사용하자.
  */
