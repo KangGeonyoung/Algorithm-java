@@ -9,15 +9,14 @@ import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
 /**
- * 다익스트라 알고리즘 - 백준: 11779번 (골드 3)
- * - 최소 경로를 기록하고 싶을 때는 List<Integer>를 사용하자.
- *   - path = new ArrayList<>(path_copy);
- * - 시간 초과가 날 경우, 간선에 대한 코스트보다 result의 코스트가 더 낮은 경우 continue 실행할 것
+ * 다익스트라 알고리즘 - 백준: 11779번 (2) (골드 3)
+ * - 다익스트라는 알고리즘이 복잡하니 복습해둘 것
+ * - Result의 초기 값은 Integer.MAX_VALUE나 문제에서 주어지는 최댓값으로 지정할 것
  */
-public class Problem_11779 {
+public class Problem_11779_2 {
 
-    static int n, m;
-    static int start, end;
+    static int n;  // 도시 개수
+    static int m;  // 버스 개수
     static List<Node>[] nodes;
     static Result[] results;
 
@@ -30,7 +29,6 @@ public class Problem_11779 {
 
         nodes = new List[n + 1];
         results = new Result[n + 1];
-
 
         for (int i = 1; i <= n; i++) {
             nodes[i] = new ArrayList<>();
@@ -47,19 +45,19 @@ public class Problem_11779 {
         }
 
         st = new StringTokenizer(br.readLine());
-        start = Integer.parseInt(st.nextToken());
-        end = Integer.parseInt(st.nextToken());
+        int start = Integer.parseInt(st.nextToken());
+        int end = Integer.parseInt(st.nextToken());
 
-        dijkstra();
+        dijkstra(start, end);
 
         System.out.println(results[end].cost);
         System.out.println(results[end].path.size());
-        for(Integer path : results[end].path) {
-            System.out.print(path + " ");
+        for (int i = 0; i < results[end].path.size(); i++) {
+            System.out.print(results[end].path.get(i) + " ");
         }
     }
 
-    public static void dijkstra() {
+    public static void dijkstra(int start, int end) {
         PriorityQueue<Node> queue = new PriorityQueue<>((o1, o2) -> o1.cost - o2.cost);
         results[start].cost = 0;
         results[start].path.add(start);
@@ -68,7 +66,6 @@ public class Problem_11779 {
         while (!queue.isEmpty()) {
             Node current = queue.poll();
 
-            // 검사하려는 간선의 코스트보다 현재 계산해둔 최소 경로 results보다 크다면 패스
             if (current.cost > results[current.index].cost) {
                 continue;
             }
@@ -101,8 +98,8 @@ public class Problem_11779 {
         List<Integer> path;
 
         public Result() {
-            cost = Integer.MAX_VALUE;
-            path = new ArrayList<>();
+            this.cost = Integer.MAX_VALUE;
+            this.path = new ArrayList<>();
         }
     }
 }
