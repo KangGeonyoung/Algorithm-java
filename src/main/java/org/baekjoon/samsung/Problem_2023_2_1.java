@@ -6,10 +6,10 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * 삼성 2023 하반기 오전 1번 문제 : 미지의 공간 탈출
+ * 삼성 2023 하반기 오전 1번 문제 : 미지의 공간 탈출 (첫 번째 풀이)
  * - https://www.codetree.ai/ko/frequent-problems/problems/royal-knight-duel/description?introductionSetId=&bookmarkId=
  */
-public class Problem_2023_2 {
+public class Problem_2023_2_1 {
 
     static int L, N, Q;
     static int[][] chessMap;  // 체스판 맵
@@ -166,7 +166,7 @@ public class Problem_2023_2 {
 
     // 원본 기사맵에 기사 이동 명령 실행
     public static void runInstruction(int[][] copyMap, int warrior_num, int warrior_dir) {
-//        System.out.println("Start warrior_num = " + warrior_num);
+        System.out.println("Start warrior_num = " + warrior_num);
         movedWarriors.add(warrior_num);
         List<Node> positions = new ArrayList<>();
 
@@ -213,7 +213,7 @@ public class Problem_2023_2 {
             warriorMap[next.row][next.col] = copyMap[cur.row][cur.col];
         }
 
-//        printWarriorMap();
+        printWarriorMap();
     }
 
 
